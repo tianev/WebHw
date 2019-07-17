@@ -165,3 +165,50 @@ body{
 .middle li{
 	display: block;
 }
+
+
+
+@media print { 
+	header, footer, a{ 
+		display: none;
+		height: 0;
+		width: 0; 
+	} 
+	.main{
+		margin-top: 0;
+		grid-template-columns: 0fr 5fr 0fr;
+	}
+	.middle{
+		text-align: center;
+	}
+}
+
+a{
+	text-decoration: none;
+	color: black;
+}
+.list{
+	text-align: left;
+}
+
+.list ul{
+	font-size: 23px;
+}
+
+.list h2{
+	text-align: center;
+}
+
+.Infotext{
+	text-align: justify;
+}
+
+.Infotext h1{
+	text-align: center;
+}
+
+.Infotext img{
+	width: 175px;
+	float: left;
+	padding-right: 10px;
+}
