@@ -167,7 +167,7 @@ body{
 }
 
 @media print { 
-	header, footer, a{ 
+	header, footer, a, img{ 
 		display: none;
 		height: 0;
 		width: 0; 
