@@ -166,8 +166,6 @@ body{
 	display: block;
 }
 
-
-
 @media print { 
 	header, footer, a{ 
 		display: none;
@@ -181,34 +179,4 @@ body{
 	.middle{
 		text-align: center;
 	}
-}
-
-a{
-	text-decoration: none;
-	color: black;
-}
-.list{
-	text-align: left;
-}
-
-.list ul{
-	font-size: 23px;
-}
-
-.list h2{
-	text-align: center;
-}
-
-.Infotext{
-	text-align: justify;
-}
-
-.Infotext h1{
-	text-align: center;
-}
-
-.Infotext img{
-	width: 175px;
-	float: left;
-	padding-right: 10px;
 }
