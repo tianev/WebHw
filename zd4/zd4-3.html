@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+   <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="style.css">
+        <title>zd-4</title>
+        <link href="https://fonts.googleapis.com/css?family=Gabriela" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4 col-xl-3">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                          <a class="nav-link active" href="zd4-1.html">4-1</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="zd4-2.html">4-2</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="zd4-3.html">4-3</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="zd4-4.html">4-4</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-8 col-xl-9">
+                    <main>
+                        <div class="btn">
+                            <button id="res-btn">Start</button>
+                        </div>
+                        <div id="matrix-holder"></div>
+                    </main>
+                </div>
+            </div>
+        </div>
+    <footer>&#9400 Тян Э.В. </footer>
+    <script>
+        const btn = document.querySelector('#res-btn');
+
+        btn.addEventListener('click', function () {
+            btn.preventDefault;
+            var matrix = [];
+            temp = 0;
+
+            for (let i = 0; i < 5; i++) {
+                matrix[i] = []
+                str = prompt('Введите строку массива', '');
+                str = str.split(' ');
+                for (let j = 0; j < 7; j++) {
+                    if (!(parseInt(str[j])) || (str[j] == undefined) || (str[j] == '')) {
+                        str[j] = "0";
+                    }
+                    matrix[i][j] = str[j];
+                }
+            }
+
+            for (let j = 0; j < 7; j++) {
+              for (let i = 1; i < 5; i++) {
+                    if (Math.abs(parseInt(matrix[i][j])) < Math.abs(parseInt(matrix[i-1][j]))) {
+                        temp = parseInt(matrix[i-1][j]);
+                        parseInt(matrix[i-1][j]) = parseInt(matrix[i][j]);
+                        parseInt(matrix[i][j]) = temp;
+                    }
+                }
+            }
+
+            /*for (let i = 0; i < 5; i++) {
+                if (matrix[i].includes(max + "")) {
+                    let kek = matrix[i][matrix[i].indexOf(max + "")];
+                    matrix[i][matrix[i].indexOf(max + "")] = matrix[0][0];
+                    matrix[0][0] = kek;
+                    console.log(matrix);
+                }
+            }*/
+
+            let holder = ''
+            for (let i = 0; i < 5; i++) {
+
+                holder += '<div class="row">';
+
+                for (let j = 0; j < 7; j++) {
+
+                    holder += '<div class="el">' + matrix[i][j] + '</div>';
+
+                }
+                holder += '</div>'
+            }
+            document.querySelector('#matrix-holder').innerHTML = holder;
+
+        });
+    </script>
+    </body>
+</html>

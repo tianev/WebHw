@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+   <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="style.css">
+        <title>zd-4</title>
+        <link href="https://fonts.googleapis.com/css?family=Gabriela" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4 col-xl-3">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="zd4-1.html">4-1</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="zd4-2.html">4-2</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="zd4-3.html">4-3</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="zd4-4.html">4-4</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-8 col-xl-9">
+                    <main>
+                        <div class="btn">
+                            <button id="res-btn">Start</button>
+                        </div>
+                        <div id="matrix-holder"></div>
+                    </main>
+                </div>
+            </div>
+        </div>
+    <footer>&#9400 Тян Э.В. </footer>
+    <script>
+        const btn = document.querySelector('#res-btn');
+        btn.addEventListener('click', function () {
+            const btn = document.querySelector('#res-btn');
+
+            function getRandomInt(min, max) {
+                return Math.floor(Math.random() * (max - min)) + min;
+            }
+
+            function getArray(n) {
+                let result = [];
+                for (let i = 0; i <= n; i++) {
+                    result[i] = getRandomInt(1, 3000);
+                }
+                return result;
+            }
+
+            function getResultArray(a) {
+
+                for (let i = 0; i < a.length; i++) {
+                    for (let j = 0; j < a.length; j++) {
+                        if (a[i] >= a[j]) {
+                            dop = a[i];
+                            a[i] = a[j];
+                            a[j] = dop;
+                        }
+                    }
+                }
+                return a;
+            }
+
+            n = prompt("Введите размерность будущего массива");
+            if (n <= 0){
+                alert('Введите число больше 0!')
+            }
+            let a = getArray(n * n);
+
+            a = getResultArray(a);
+
+            let mas = [];
+
+            for (let i = 1; i <= n; i++) {
+                mas[i] = [];
+            }
+
+            k = 0;
+            for (let j = 1; j <= n; j++) {
+                for (i = 1; i <= n; i++) {
+                    if (j % 2 == 1) {
+                        mas[i][j] = a[k]; k++;
+                    }
+                    else {
+                        mas[n - i + 1][j] = a[k]; k++;
+                    }
+                }
+            }
+
+            let holder = ''
+            for (let i = 1; i <= n; i++) {
+                holder += '<div class="row">';
+                for (let j = 1; j <= n; j++) {
+                    holder += '<div class="el">' + mas[i][j] + '</div>';
+                }
+                holder += '</div>'
+            }
+            document.querySelector('#matrix-holder').innerHTML = holder;
+        });
+    </script>
+    </body>
+</html>

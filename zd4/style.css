@@ -1,0 +1,20 @@
+
+    label{
+      min-width: 200px;
+      margin: 10px;
+  }
+  .content{
+      margin-top: 200px;
+      font-size: 20px;
+      width: 400px;
+      padding: 10px;
+  }
+  .el{
+      width: 50px;
+      margin-right: 5px;
+      padding: 5px;
+  }
+
+  #matrix-holder{
+      margin-left: 50px;
+  }

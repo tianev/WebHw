@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+   <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="style.css">
+        <title>zd-4</title>
+        <link href="https://fonts.googleapis.com/css?family=Gabriela" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4 col-xl-3">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                          <a class="nav-link active" href="zd4-1.html">4-1</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="zd4-2.html">4-2</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="zd4-3.html">4-3</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="zd4-4.html">4-4</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-8 col-xl-9">
+                  <main>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm">
+                                <label for="b">Длина стороны:</label>
+                                <input type="text" name="b" id="bottom_edge" placeholder="input"><br>
+                            </div>
+                            <div class="col-sm">
+                                <div class="btn">
+                                    <div>
+                                        <button id='commit_edges' type="button" name="submit">
+                                            Commit
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm">
+                                <label for="h">Высота :</label>
+                                <input type="text" name="h" id="height" placeholder="input"><br>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm">
+                                <div class="answers">
+                                    <div class="content">
+                                        <span>Площадь треугольника:</span>
+                                        <span id="figure_result">равен</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+                </div>
+            </div>
+        </div>
+    <footer>&#9400 Тян Э.В. </footer>
+    <script>
+      const botEdge = document.getElementById('bottom_edge');
+      const height = document.getElementById('height');
+      const btn_1 = document.getElementById('commit_edges');
+
+      btn_1.addEventListener('click', function () {
+          if ((parseInt(botEdge.value) <= 0) || (parseInt(height.value) <= 0)) {
+              alert("Данные введены неверно.");
+              return;
+          }
+          document.getElementById('figure_result').innerHTML = parseInt(botEdge.value) / 2 * parseInt(height.value);
+      });
+  </script>
+    </body>
+</html>
