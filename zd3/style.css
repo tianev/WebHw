@@ -1,0 +1,115 @@
+body{
+	background-color: #D3D3D3;
+}
+
+.menu ul li{
+	padding:10px;
+
+}
+.menu span {
+	font-size: 30px;
+	padding: 10px;
+}
+
+.menu ul > li > ul:hover{
+	background-color:grey;
+}
+
+.menu ul ul ul > li:hover{
+	background-color:grey;
+}
+
+.menu ul {
+	position:relative;
+	margin:0;
+	padding:0;
+	background-color:#C0C0C0;
+}
+
+.menu ul ul {
+	display: none;
+	position:absolute;
+	background-color:grey;
+}
+
+.menu li:hover ul {
+	display:block;
+}
+
+.menu li:hover li {
+	display:block;
+
+}
+
+.menu {
+	width: 120px;
+	background-color: rgba(255,255,255,.5);
+}
+
+.menu, #menu-list, .menu-item {
+	box-sizing: border-box;
+}
+
+#menu-list {
+	display: none;
+	position: relative;
+}
+
+#menu-list .menu-item {
+	background-color: #fafafa;
+	position: relative;
+}
+
+#menu-list .menu-item .submenu-list {
+	position: absolute;
+	left: 100%;
+	top: 0;
+}
+
+.submenu-list > li {
+	width: 120px;
+}
+
+.menu:hover > #menu-list {
+	display: block;
+}
+
+.left, .right {
+	width:100%;
+}
+
+.center{
+	width:60%;
+}
+
+.flex-container {
+      display: flex;
+      justify-content: space-between;
+    }
+
+.flex-item-1 {
+	  flex-direction: column;
+      display: flex;
+      justify-content: space-around;
+    }
+
+.flex-item-1, 
+.flex-item-3{
+	flex-grow: 2;
+}
+
+.flex-item-2{
+	flex-grow: 6;
+}
+
+#me {
+    width: 20%;
+    height: 15%;
+    transition: .4s;
+}
+
+.media-left img{
+    width: 90px;
+	height: 50px;
+    transition: .4s;
+}

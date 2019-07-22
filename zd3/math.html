@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="style.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <title>Главная</title>
+        <script src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+	<script>
+		MathJax.Hub.Config({ tex2jax: { inlineMath: [['$', '$'], ['\\(', '\\)']] } });
+	</script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+		integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+		crossorigin="anonymous"></script>
+    </head>
+    <body>          
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <a class="navbar-brand" href="zd3.html">Главная</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                      <ul class="navbar-nav">
+                        <li class="nav-item active">
+                          <a class="nav-link" href="bomb.html">Рисунок <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="math.html">Math</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Old
+                          </a>
+                          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="Untitled-1.html">zadanie 1</a>
+                            <a class="dropdown-item" href="zd2_main.html">zadanie 2</a>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </nav>
+        </header>
+
+        <div class="container-fluid">
+                <div class="row">
+                        <div class="col-md-4 col-xl-3">
+                            <div id="accordion">
+                                <br>
+                                <div class="card">
+                                    <div class="card-header" id="headingTwo">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link collapsed" id="MainB" data-toggle="collapse"
+                                                data-target="#Contacts" aria-expanded="false" aria-controls="Contacts">
+                                                Контакты
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="Contacts" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                                        <div class="card-body">
+                                            <ul>
+                                                <li><a href="https://vk.com/linajkl">Вконтакте</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header" id="headingThree">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link collapsed" id="MainC" data-toggle="collapse"
+                                                data-target="#collapseThree" aria-expanded="false"
+                                                aria-controls="collapseThree">
+                                                Оставить отзыв
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                                        data-parent="#accordion">
+                                        <div class="card-body">
+                                            <form target="_self" method="GET">
+                                                <div class="form-group">
+                                                    <input name="name" class="form-control form-control-lg" type="text"
+                                                        placeholder="Army">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="emailFormInput1">Ваш почтовый адрес</label>
+                                                    <input name="email" type="email" class="form-control" id="emailFormInput1"
+                                                        placeholder="Army@example.com">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="textFormInput1">Сообщение</label>
+                                                    <textarea name="text" class="form-control" id="textFormInput1"
+                                                        rows="3"></textarea>
+                                                </div>
+                                                <div class="form-group">
+                                                    <input name="submit" type="submit" class="form-control" id="emailFormInput1"
+                                                        value="Отправить">
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header" id="headingThree">
+                                        <h5 class="mb-0">
+                                            <a tabindex="0" class="btn btn-light" role="button" data-toggle="popover"
+                                                data-trigger="focus" title="Спасибо"
+                                                data-content="Надеюсь вам понравился мой сайт">Благодарность
+                                            </a>
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-8 col-xl-9">
+                                <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">#</th>
+                                                <th scope="col">Имя</th>
+                                                <th scope="col" style="text-align: center;">Формула</th>
+                                                <th scope="col">Код</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">1</th>
+                                                <td>Интегралы</td>
+                                                <td>$$\int_{a}^{b} x^2 dx$$</td>
+                                                <td>$\int_{a}^{b} x^2 dx$</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">2</th>
+                                                <td>Суммы</td>
+                                                <td>$$\sum_{k=1}^{n=\infty} 1 = n$$</td>
+                                                <td>$\sum_{k=1}^{n=\infty} 1 = n$</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">3</th>
+                                                <td>Дроби</td>
+                                                <td>$${1+R\over 1-v^2}$$</td>
+                                                <td>${1+R\over 1-v^2}$</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">4</th>
+                                                <td>Корень</td>
+                                                <td>$$\sqrt{25}=5$$</td>
+                                                <td>$\sqrt{25}=5$</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">5</th>
+                                                <td>Предел</td>
+                                                <td>$$\lim_{x\to\infty} f(x)$$</td>
+                                                <td>$\lim_{x\to\infty} f(x)$</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                        </div>  
+            </div>  
+        </div>
+        <footer>
+                <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                          <li class="breadcrumb-item"><a href="#">Главная</a></li>
+                          <li class="breadcrumb-item"><a href="#">Math</a></li>
+                        </ol>
+                      </nav>
+                <a class="nav-link disabled" href="#" data-toggle="modal" data-target="#myModal">
+                    <i class="glyphicon glyphicon-heart"></i> Тян Э.В.</a>
+                    <div class="modal fade" id="myModal">
+                            <div class="modal-dialog" role="document">
+                                <div class="card border-danger">
+                                    <div class="card-header bg-danger text-white">
+                                        What?...
+                                    </div>
+                                    <div class="card-body">
+                                        <p>Здесь ничего нет((( </p>
+                                        <hr>
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">вернуться обратно</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+            </footer>
+        
+            <script src="http://fred-wang.github.io/mathjax.js/mpadded-min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+        <script src="js/script.js"></script>
+        <script>
+                $('.popover-dismiss').popover({
+                    trigger: 'focus'
+                })
+                $(function () {
+                    $('[data-toggle="popover"]').popover()
+                })
+            </script>
+    </body>
+</html>
