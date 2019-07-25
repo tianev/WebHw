@@ -1,0 +1,38 @@
+#calendar {
+    width: 40vw;
+    height: 75vh;
+    text-align:center;
+    border: 1px solid #333
+}
+
+#calendar .top div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#calendar div {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    height: 50px;
+}
+
+#calendar div:not(.labels) span:hover {
+    background: rgba(91, 9, 185, 0.541);
+}
+
+#calendar div span:nth-child(6):not(.gray), #calendar div span:nth-child(7):not(.gray) {
+    color: rgb(161, 5, 31)
+}
+
+#calendar .current {
+    background: rgb(91, 9, 185);
+}
+
+.top{
+    background: rgba(91, 9, 185, 0.705);
+}
+
+#calendar .gray {
+    color: #BFB5AF;
+}
